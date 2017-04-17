@@ -356,7 +356,7 @@ class SpaceInvaders {
                 this.makeRound();
                 this.running = false;
                 this.draw();
-                basic.pause(5000);
+                basic.pause(1000);
                 this.running = true;
             } else {
                 basic.showNumber(21 - this.roundSpeed);
