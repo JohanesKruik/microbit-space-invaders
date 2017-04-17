@@ -154,7 +154,7 @@ class SpaceInvaders {
      */
     shootPressed() {
         // The player can shoot faster as the rounds increase
-        if ((game.currentTime() - this.playerLastShot) > 2000 / (20 - this.roundSpeed) && this.running) {
+        if ((game.currentTime() - this.playerLastShot) > (2000 / (21 - this.roundSpeed)) && this.running) {
             let position = this.player.position;
             let elevation = this.player.elevation;
 
@@ -167,6 +167,7 @@ class SpaceInvaders {
             this.playerLastShot = game.currentTime();
             this.draw();
         }
+
     }
 
     /**
@@ -355,7 +356,7 @@ class SpaceInvaders {
                 this.makeRound();
                 this.running = false;
                 this.draw();
-                basic.pause(2000);
+                basic.pause(5000);
                 this.running = true;
             } else {
                 basic.showNumber(21 - this.roundSpeed);
